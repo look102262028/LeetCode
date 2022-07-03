@@ -1,16 +1,15 @@
 package leetcode;
 
-import easy._01_TwoSum.Chun_01;
-
 public interface LeetcodeInterface {
 
   /**
-   * 執行Method
-   * @Test
-   * @DisplayName帶題目
+   * 開始測試
    */
   void runMain();
 
+  /**
+   * 執行
+   */
   void runTopic(Topic topic);
 
   /**
@@ -18,5 +17,6 @@ public interface LeetcodeInterface {
    */
   void example();
 
-  class Topic{}
+  class Topic {
+  }
 }
