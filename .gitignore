@@ -17,10 +17,10 @@ out/
 rebel.xml
 
 ### project ignore ###
-/.gradle/
-/out
-/bin/
-/.project
-/.classpath
-/.settings
-/build
+#/.gradle/
+#/out
+#/bin/
+#/.project
+#/.classpath
+#/.settings
+#/build
