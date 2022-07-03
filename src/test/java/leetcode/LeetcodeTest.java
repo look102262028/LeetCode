@@ -18,4 +18,8 @@ public abstract class LeetcodeTest implements LeetcodeInterface {
     stopWatch.stop();
     System.out.println(stopWatch.prettyPrint());
   }
+
+  public void printResult(String result, boolean flag) {
+    (flag ? System.out : System.err).println(result);
+  }
 }

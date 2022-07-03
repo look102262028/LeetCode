@@ -18,7 +18,7 @@ public class Chun_01 extends LeetcodeTest {
   private List<Topic> topicList = new ArrayList<>();
 
   @Test
-  @DisplayName("TwoSum")
+  @DisplayName("TwoSum: output == result")
   @Override
   public void runMain() {
     // 1. 寫入範例
@@ -46,14 +46,15 @@ public class Chun_01 extends LeetcodeTest {
     }
 
     int[] result = demo.result;
-    System.out.printf("result:%s, assert:%s, output:%s%n", Arrays.toString(result), Arrays.equals(result, output), Arrays.toString(output));
+    final boolean sameResult = Arrays.equals(result, output);
+    this.printResult(String.format("result:%s, output:%s", Arrays.toString(result), Arrays.toString(output)), sameResult);
   }
 
 
   @Override
   public void example() {
     topicList.add(new Topic(new int[]{2, 7, 11, 15}, 9, new int[]{0, 1}));
-    topicList.add(new Topic(new int[]{3, 2, 4}, 6, new int[]{1, 2}));
+    topicList.add(new Topic(new int[]{3, 2, 4}, 6, new int[]{1, 1}));
     topicList.add(new Topic(new int[]{3, 3}, 6, new int[]{0, 1}));
   }
 
