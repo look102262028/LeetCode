@@ -5,18 +5,6 @@ public interface LeetcodeInterface {
   /**
    * 開始測試
    */
-  void runMain();
+  void main();
 
-  /**
-   * 執行
-   */
-  void runTopic(Topic topic);
-
-  /**
-   * 設定題目範例
-   */
-  void example();
-
-  class Topic {
-  }
 }
