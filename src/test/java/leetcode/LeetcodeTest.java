@@ -33,4 +33,7 @@ public abstract class LeetcodeTest implements LeetcodeInterface {
     (flag ? System.out : System.err).println(result);
   }
 
+  public void print(String result) {
+    this.printResult(result, true);
+  }
 }
