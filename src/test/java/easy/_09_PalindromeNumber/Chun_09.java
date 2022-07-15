@@ -19,20 +19,21 @@ public class Chun_09 extends LeetcodeTest {
 
             char[] targetChars = String.valueOf(target).toCharArray();
             int length = targetChars.length;
-            if (target < 0 || length % 2 == 0) {
+            if (target < 0) {
                 this.printResult(String.format("%d不符合.%n", target), !output);
                 continue;
             }
 
+            int lenNode = length % 2 == 0 ? length / 2 : length / 2 + 1;
             boolean flag = true;
-            for(int i = 0; i<length/2+1; i++){
-                if(targetChars[i] != targetChars[length-i-1]){
+            for (int i = 0; i < lenNode; i++) {
+                if (targetChars[i] != targetChars[length - i - 1]) {
                     flag = false;
                     break;
                 }
             }
 
-            this.printResult(String.format("%d%s.%n", target, flag?"符合":"不符合"), flag == output);
+            this.printResult(String.format("%d%s.%n", target, flag ? "符合" : "不符合"), flag == output);
         }
     }
 

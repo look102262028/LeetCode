@@ -10,6 +10,7 @@ public class _09_Mission extends LeetcodeMission {
         this.setTopic(new Topic09(-121, false));
         this.setTopic(new Topic09(10, false));
         this.setTopic(new Topic09(1, true));
+        this.setTopic(new Topic09(11, true));
     }
 
     static class Topic09 extends Topic {
