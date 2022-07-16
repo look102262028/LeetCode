@@ -4,8 +4,8 @@ import leetcode.LeetcodeMission;
 import leetcode.LeetcodeTest;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class Chun_27 extends LeetcodeTest {
@@ -13,7 +13,6 @@ public class Chun_27 extends LeetcodeTest {
     static {
         leetcodeMission = new _27_Mission();
     }
-
 
     @DisplayName("移除陣列")
     public void main() {
