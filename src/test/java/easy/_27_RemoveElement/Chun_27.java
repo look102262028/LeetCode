@@ -2,9 +2,11 @@ package easy._27_RemoveElement;
 
 import leetcode.LeetcodeMission;
 import leetcode.LeetcodeTest;
+import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Chun_27 extends LeetcodeTest {
 
@@ -19,20 +21,27 @@ public class Chun_27 extends LeetcodeTest {
             _27_Mission.Topic27 topic27 = (_27_Mission.Topic27) topic;
             int[] nums = topic27.nums;
             int val = topic27.val;
-            List<Integer> expectedNums = topic27.expectedNums;
+            int[] expectedNums = topic27.expectedNums;
             int removeElement = topic27.removeElement;
 
             int length = nums.length;
+            int[] results = new int[length];
+            int index = 0;
             int count = 0;
+
             for (int num : nums) {
-                if (num == val) count++;
+                if (num == val) {
+                    count++;
+                } else {
+                    results[index] = num;
+                    index++;
+                }
             }
 
-            if (count != 0) {
-                boolean flag = removeElement == count;
-                this.print(String.format("count:%d, removeCount:%d%n", count, removeElement));
-                this.printResult(String.format("有%d個%d,移除數量%s%n", count, val, flag ? "正確" : "錯誤"), flag);
-            }
+            this.print("array:" + Arrays.asList(results).stream().map(String::valueOf).collect(Collectors.joining(",")));
+            this.print("count:" + count);
+            this.print("remove:" + removeElement);
+
         }
     }
 }
